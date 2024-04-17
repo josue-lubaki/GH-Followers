@@ -28,7 +28,7 @@ class SearchViewController: UIViewController {
         super.viewWillAppear(animated)
         // Because viewDidLoad doesn't get called when you go back 
         // because the view has already been loaded
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     func createDismissKeyboardTapGesture() {
