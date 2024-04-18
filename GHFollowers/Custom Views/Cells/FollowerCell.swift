@@ -15,6 +15,7 @@ class FollowerCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        configure()
     }
     
     required init?(coder: NSCoder) {
@@ -39,7 +40,7 @@ class FollowerCell: UICollectionViewCell {
             
             usernameLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 12),
             usernameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
-            usernameLabel.trailingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: -padding),
+            usernameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
             usernameLabel.heightAnchor.constraint(equalToConstant: 20)
         ])
     }

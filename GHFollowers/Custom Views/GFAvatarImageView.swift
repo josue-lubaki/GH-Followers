@@ -9,7 +9,7 @@ import UIKit
 
 class GFAvatarImageView: UIImageView {
     
-    let placeholderImage = UIImage(named: "avatar-placeholder")!
+    let placeholderImage = UIImage(resource: .avatarPlaceholder)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,5 +25,9 @@ class GFAvatarImageView: UIImageView {
         clipsToBounds       = true
         image               = placeholderImage
         translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            widthAnchor.constraint(equalToConstant: 100)
+        ])
     }
 }
