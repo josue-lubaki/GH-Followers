@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "avatar-placeholder@2x 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -11,6 +12,7 @@
           "value" : "dark"
         }
       ],
+      "filename" : "avatar-placeholder-dark@2x 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
