@@ -28,6 +28,7 @@
 		B08053062BD1649A0019DE38 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053052BD1649A0019DE38 /* GFAvatarImageView.swift */; };
 		B08053082BD194290019DE38 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053072BD194290019DE38 /* UIHelper.swift */; };
 		B08053122BD2B9C30019DE38 /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053112BD2B9C30019DE38 /* GFEmptyStateView.swift */; };
+		B08053142BD2F1EA0019DE38 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053132BD2F1EA0019DE38 /* UserInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		B08053052BD1649A0019DE38 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 		B08053072BD194290019DE38 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		B08053112BD2B9C30019DE38 /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
+		B08053132BD2F1EA0019DE38 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				B08052E12BCDCAFA0019DE38 /* SearchViewController.swift */,
 				B08052E32BCDCB330019DE38 /* FavoritesListViewController.swift */,
 				B08052E92BCEEF8E0019DE38 /* FollowerListViewController.swift */,
+				B08053132BD2F1EA0019DE38 /* UserInfoViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				B08053122BD2B9C30019DE38 /* GFEmptyStateView.swift in Sources */,
 				B08052FE2BD0472E0019DE38 /* NetworkManager.swift in Sources */,
 				B08052E42BCDCB330019DE38 /* FavoritesListViewController.swift in Sources */,
+				B08053142BD2F1EA0019DE38 /* UserInfoViewController.swift in Sources */,
 				B08052EC2BD014B40019DE38 /* GFTitleLabel.swift in Sources */,
 				B08052D02BCD6EA00019DE38 /* SceneDelegate.swift in Sources */,
 			);
