@@ -29,6 +29,9 @@
 		B08053122BD2B9C30019DE38 /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053112BD2B9C30019DE38 /* GFEmptyStateView.swift */; };
 		B08053142BD2F1EA0019DE38 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053132BD2F1EA0019DE38 /* UserInfoViewController.swift */; };
 		B08053162BD2FB910019DE38 /* GFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053152BD2FB910019DE38 /* GFError.swift */; };
+		B08053182BD302F70019DE38 /* GFUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053172BD302F70019DE38 /* GFUserInfoHeaderVC.swift */; };
+		B080531A2BD303560019DE38 /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053192BD303560019DE38 /* GFSecondaryTitleLabel.swift */; };
+		B080531C2BD30AE70019DE38 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080531B2BD30AE70019DE38 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		B08053112BD2B9C30019DE38 /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
 		B08053132BD2F1EA0019DE38 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		B08053152BD2FB910019DE38 /* GFError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFError.swift; sourceTree = "<group>"; };
+		B08053172BD302F70019DE38 /* GFUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFUserInfoHeaderVC.swift; sourceTree = "<group>"; };
+		B08053192BD303560019DE38 /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
+		B080531B2BD30AE70019DE38 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +172,7 @@
 			children = (
 				B08053072BD194290019DE38 /* UIHelper.swift */,
 				B08053152BD2FB910019DE38 /* GFError.swift */,
+				B080531B2BD30AE70019DE38 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -214,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				B08052EF2BD016D00019DE38 /* GFAlertViewController.swift */,
+				B08053172BD302F70019DE38 /* GFUserInfoHeaderVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -223,6 +231,7 @@
 			children = (
 				B08052EB2BD014B40019DE38 /* GFTitleLabel.swift */,
 				B08052ED2BD0161A0019DE38 /* GFBodyLabel.swift */,
+				B08053192BD303560019DE38 /* GFSecondaryTitleLabel.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -303,14 +312,17 @@
 				B08053082BD194290019DE38 /* UIHelper.swift in Sources */,
 				B08052E22BCDCAFA0019DE38 /* SearchViewController.swift in Sources */,
 				B08052F22BD01D1F0019DE38 /* UIViewController+Ext.swift in Sources */,
+				B080531C2BD30AE70019DE38 /* Constants.swift in Sources */,
 				B08053062BD1649A0019DE38 /* GFAvatarImageView.swift in Sources */,
 				B08052E62BCECEED0019DE38 /* GFButton.swift in Sources */,
 				B08052EA2BCEEF8E0019DE38 /* FollowerListViewController.swift in Sources */,
 				B08053042BD1640B0019DE38 /* FollowerCell.swift in Sources */,
 				B08052EE2BD0161A0019DE38 /* GFBodyLabel.swift in Sources */,
+				B08053182BD302F70019DE38 /* GFUserInfoHeaderVC.swift in Sources */,
 				B08053162BD2FB910019DE38 /* GFError.swift in Sources */,
 				B08052F92BD038A50019DE38 /* Follower.swift in Sources */,
 				B08052CE2BCD6EA00019DE38 /* AppDelegate.swift in Sources */,
+				B080531A2BD303560019DE38 /* GFSecondaryTitleLabel.swift in Sources */,
 				B08053122BD2B9C30019DE38 /* GFEmptyStateView.swift in Sources */,
 				B08052FE2BD0472E0019DE38 /* NetworkManager.swift in Sources */,
 				B08052E42BCDCB330019DE38 /* FavoritesListViewController.swift in Sources */,
