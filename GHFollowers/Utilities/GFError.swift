@@ -1,8 +1,8 @@
 //
-//  ErrorMessage.swift
-//  GFError
+//  GFError.swift
+//  GHFollowers
 //
-//  Created by Josue Lubaki on 2024-04-17.
+//  Created by Josue Lubaki on 2024-04-19.
 //
 
 import Foundation
