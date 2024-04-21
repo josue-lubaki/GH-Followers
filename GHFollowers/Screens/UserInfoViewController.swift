@@ -37,9 +37,6 @@ class UserInfoViewController: UIViewController {
         
         itemViews = [headerView, itemViewOne, itemViewTwo]
         
-        itemViewOne.backgroundColor = .systemPink
-        itemViewTwo.backgroundColor = .systemBlue
-        
         for itemView in itemViews {
             view.addSubview(itemView)
             itemView.translatesAutoresizingMaskIntoConstraints = false
@@ -68,7 +65,9 @@ class UserInfoViewController: UIViewController {
             switch result {
                 case .success(let user):
                     DispatchQueue.main.async {
-                        self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
+                        self.add(childViewController: GFUserInfoHeaderVC(user: user), to: self.headerView)
+                        self.add(childViewController: GFRepoItemVC(user: user), to: self.itemViewOne)
+                        self.add(childViewController: GFFollowerItemVC(user: user), to: self.itemViewTwo)
                     }
                     
                 case .failure(let error):
@@ -77,11 +76,11 @@ class UserInfoViewController: UIViewController {
         }
     }
     
-    private func add(childVC : UIViewController, to containerView : UIView){
-        addChild(childVC)
-        containerView.addSubview(childVC.view)
-        childVC.view.frame = containerView.bounds
-        childVC.didMove(toParent: self)
+    private func add(childViewController : UIViewController, to containerView : UIView){
+        addChild(childViewController)
+        containerView.addSubview(childViewController.view)
+        childViewController.view.frame = containerView.bounds
+        childViewController.didMove(toParent: self)
     }
     
     @objc func dismissViewController() {
