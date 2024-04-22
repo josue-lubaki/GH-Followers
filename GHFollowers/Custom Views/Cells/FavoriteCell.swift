@@ -1,5 +1,5 @@
 //
-//  favoriteCell.swift
+//  FavoriteCell.swift
 //  GHFollowers
 //
 //  Created by Josue Lubaki on 2024-04-22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class favoriteCell: UITableViewCell {
+class FavoriteCell: UITableViewCell {
 
     static let reuseID = "FavoriteCell"
     let avatarImageView = GFAvatarImageView(frame: .zero)
@@ -36,7 +36,7 @@ class favoriteCell: UITableViewCell {
         let padding : CGFloat   = 12
         
         NSLayoutConstraint.activate([
-            avatarImageView.topAnchor.constraint(equalTo: self.topAnchor),
+            avatarImageView.topAnchor.constraint(equalTo: self.topAnchor, constant : padding),
             avatarImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: padding),
             avatarImageView.heightAnchor.constraint(equalToConstant: 60),
             avatarImageView.widthAnchor.constraint(equalToConstant: 60),
