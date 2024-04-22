@@ -19,4 +19,8 @@ class GFFollowerItemVC : GFItemInfoViewController {
         itemInfoViewTwo.set(itemInfoType: .following, withCount: user.following)
         actionButton.set(backgrounfColor: .systemGreen, title: "Github Followers")
     }
+    
+    override func actionButtonTapped() {
+        delegate.didTapGetFollowers(for: user)
+    }
 }
