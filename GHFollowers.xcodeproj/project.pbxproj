@@ -39,6 +39,7 @@
 		B08053272BD596BF0019DE38 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053262BD596BF0019DE38 /* Date+Ext.swift */; };
 		B08053292BD596F70019DE38 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053282BD596F70019DE38 /* String+Ext.swift */; };
 		B080532B2BD6DA640019DE38 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080532A2BD6DA640019DE38 /* PersistenceManager.swift */; };
+		B080532D2BD6E6D40019DE38 /* favoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080532C2BD6E6D40019DE38 /* favoriteCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		B08053262BD596BF0019DE38 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		B08053282BD596F70019DE38 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		B080532A2BD6DA640019DE38 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		B080532C2BD6E6D40019DE38 /* favoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favoriteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				B08053032BD1640B0019DE38 /* FollowerCell.swift */,
+				B080532C2BD6E6D40019DE38 /* favoriteCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				B08053042BD1640B0019DE38 /* FollowerCell.swift in Sources */,
 				B08052EE2BD0161A0019DE38 /* GFBodyLabel.swift in Sources */,
 				B08053182BD302F70019DE38 /* GFUserInfoHeaderVC.swift in Sources */,
+				B080532D2BD6E6D40019DE38 /* favoriteCell.swift in Sources */,
 				B08053162BD2FB910019DE38 /* GFError.swift in Sources */,
 				B08052F92BD038A50019DE38 /* Follower.swift in Sources */,
 				B08052CE2BCD6EA00019DE38 /* AppDelegate.swift in Sources */,
