@@ -32,4 +32,9 @@ class GFButton: UIButton {
         translatesAutoresizingMaskIntoConstraints = false
     }
     
+    func set(backgrounfColor : UIColor, title : String){
+        self.backgroundColor = backgrounfColor
+        setTitle(title, for: .normal)
+    }
+    
 }
