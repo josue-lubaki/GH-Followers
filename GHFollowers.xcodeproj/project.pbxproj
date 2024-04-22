@@ -38,6 +38,7 @@
 		B08053242BD58BE10019DE38 /* GFFollowerItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053232BD58BE10019DE38 /* GFFollowerItemVC.swift */; };
 		B08053272BD596BF0019DE38 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053262BD596BF0019DE38 /* Date+Ext.swift */; };
 		B08053292BD596F70019DE38 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053282BD596F70019DE38 /* String+Ext.swift */; };
+		B080532B2BD6DA640019DE38 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080532A2BD6DA640019DE38 /* PersistenceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		B08053232BD58BE10019DE38 /* GFFollowerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFollowerItemVC.swift; sourceTree = "<group>"; };
 		B08053262BD596BF0019DE38 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		B08053282BD596F70019DE38 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		B080532A2BD6DA640019DE38 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				B08052FD2BD0472E0019DE38 /* NetworkManager.swift */,
+				B080532A2BD6DA640019DE38 /* PersistenceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				B08052CE2BCD6EA00019DE38 /* AppDelegate.swift in Sources */,
 				B080531A2BD303560019DE38 /* GFSecondaryTitleLabel.swift in Sources */,
 				B08053272BD596BF0019DE38 /* Date+Ext.swift in Sources */,
+				B080532B2BD6DA640019DE38 /* PersistenceManager.swift in Sources */,
 				B08053122BD2B9C30019DE38 /* GFEmptyStateView.swift in Sources */,
 				B08052FE2BD0472E0019DE38 /* NetworkManager.swift in Sources */,
 				B08052E42BCDCB330019DE38 /* FavoritesListViewController.swift in Sources */,
