@@ -8,6 +8,7 @@
 import Foundation
 
 enum GFError : String, Error {
+    
     case INVALID_USERNAME   = "This username created an invalid request. Please try again."
     case UNABLE_TO_COMPLETE = "Unable to complete your request. Please check your internet connection."
     case INVALID_RESPONSE   = "Invalid response from the server. Please try again."

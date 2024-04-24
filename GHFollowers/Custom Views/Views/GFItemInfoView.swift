@@ -27,6 +27,7 @@ class GFItemInfoView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     private func configure() {
         addSubViews(symbolImageView, titleLabel, countLabel)
         
@@ -53,6 +54,7 @@ class GFItemInfoView: UIView {
         ])
     }
     
+    
     func set(itemInfoType : ItemInfoType, withCount count : Int){
         switch itemInfoType {
             case .repos:
@@ -70,5 +72,4 @@ class GFItemInfoView: UIView {
         
         countLabel.text = String(count)
     }
-    
 }

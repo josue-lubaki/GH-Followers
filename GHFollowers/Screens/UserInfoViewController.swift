@@ -14,13 +14,13 @@ protocol UserInfoViewControllerDelegate : AnyObject {
 
 class UserInfoViewController: GFDataLoadingViewController {
     
-    let scrollView  = UIScrollView()
-    let contentView = UIView()
+    let scrollView          = UIScrollView()
+    let contentView         = UIView()
     
-    let headerView  = UIView()
-    let itemViewOne = UIView()
-    let itemViewTwo = UIView()
-    let dateLabel   = GFBodyLabel(textAlignment: .center)
+    let headerView          = UIView()
+    let itemViewOne         = UIView()
+    let itemViewTwo         = UIView()
+    let dateLabel           = GFBodyLabel(textAlignment: .center)
     var itemViews: [UIView] = []
     
     var username : String!
@@ -35,11 +35,13 @@ class UserInfoViewController: GFDataLoadingViewController {
         getUserInfo()
     }
     
+    
     private func configureViewController() {
         view.backgroundColor = .systemBackground
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissViewController))
         navigationItem.rightBarButtonItem = doneButton
     }
+    
     
     private func configureScrollView() {
         view.addSubview(scrollView)
@@ -51,12 +53,12 @@ class UserInfoViewController: GFDataLoadingViewController {
             contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             contentView.heightAnchor.constraint(equalToConstant: 600)
         ])
-        
     }
+    
     
     private func layoutUI(){
         
-        let padding : CGFloat = 20
+        let padding : CGFloat    = 20
         let itemHeight : CGFloat = 140
         
         itemViews = [headerView, itemViewOne, itemViewTwo, dateLabel]
@@ -113,10 +115,9 @@ class UserInfoViewController: GFDataLoadingViewController {
         childViewController.didMove(toParent: self)
     }
     
-    @objc func dismissViewController() {
+    @objc private func dismissViewController() {
         dismiss(animated: true)
     }
-
 }
 
 extension UserInfoViewController : GFRepoItemVCDelegate {
