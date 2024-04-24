@@ -36,7 +36,7 @@ class GFFollowerItemVC : GFItemInfoViewController {
     private func configureItems() {
         itemInfoViewOne.set(itemInfoType: .followers, withCount: user.followers)
         itemInfoViewTwo.set(itemInfoType: .following, withCount: user.following)
-        actionButton.set(backgrounfColor: .systemGreen, title: "Github Followers")
+        actionButton.set(color: .systemGreen, title: "Github Followers", systemImageName: SFSymbols.person3)
     }
     
     
