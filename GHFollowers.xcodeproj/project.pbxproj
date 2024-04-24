@@ -43,6 +43,7 @@
 		B08053302BD80D210019DE38 /* GFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080532F2BD80D210019DE38 /* GFTabBarController.swift */; };
 		B08053322BD8268D0019DE38 /* GFAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053312BD8268D0019DE38 /* GFAlertContainerView.swift */; };
 		B08053342BD833350019DE38 /* GFDataLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053332BD833350019DE38 /* GFDataLoadingViewController.swift */; };
+		B08053362BD8539C0019DE38 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053352BD8539C0019DE38 /* UIView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		B080532F2BD80D210019DE38 /* GFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTabBarController.swift; sourceTree = "<group>"; };
 		B08053312BD8268D0019DE38 /* GFAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertContainerView.swift; sourceTree = "<group>"; };
 		B08053332BD833350019DE38 /* GFDataLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFDataLoadingViewController.swift; sourceTree = "<group>"; };
+		B08053352BD8539C0019DE38 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				B08052F12BD01D1F0019DE38 /* UIViewController+Ext.swift */,
 				B08053262BD596BF0019DE38 /* Date+Ext.swift */,
 				B08053282BD596F70019DE38 /* String+Ext.swift */,
+				B08053352BD8539C0019DE38 /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				B08053202BD586970019DE38 /* GFItemInfoViewController.swift in Sources */,
 				B08053142BD2F1EA0019DE38 /* UserInfoViewController.swift in Sources */,
 				B08052EC2BD014B40019DE38 /* GFTitleLabel.swift in Sources */,
+				B08053362BD8539C0019DE38 /* UIView+Ext.swift in Sources */,
 				B08053222BD589BC0019DE38 /* GFRepoItemVC.swift in Sources */,
 				B08052D02BCD6EA00019DE38 /* SceneDelegate.swift in Sources */,
 			);

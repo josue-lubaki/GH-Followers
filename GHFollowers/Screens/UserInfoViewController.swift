@@ -9,8 +9,7 @@ import UIKit
 import SafariServices
 
 protocol UserInfoViewControllerDelegate : AnyObject {
-    func didTapGithubProfile(for user : User)
-    func didTapGetFollowers(for user : User)
+    func didRequestFollowers(for username : String)
 }
 
 class UserInfoViewController: GFDataLoadingViewController {
@@ -22,7 +21,7 @@ class UserInfoViewController: GFDataLoadingViewController {
     var itemViews: [UIView] = []
     
     var username : String!
-    weak var delegate : FollowerListViewControllerDelegate!
+    weak var delegate : UserInfoViewControllerDelegate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +56,7 @@ class UserInfoViewController: GFDataLoadingViewController {
         
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            headerView.heightAnchor.constraint(equalToConstant: 180),
+            headerView.heightAnchor.constraint(equalToConstant: 210),
             
             itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
             itemViewOne.heightAnchor.constraint(equalToConstant: itemHeight),
@@ -66,7 +65,7 @@ class UserInfoViewController: GFDataLoadingViewController {
             itemViewTwo.heightAnchor.constraint(equalToConstant: itemHeight),
             
             dateLabel.topAnchor.constraint(equalTo: itemViewTwo.bottomAnchor, constant: padding),
-            dateLabel.heightAnchor.constraint(equalToConstant: 18)
+            dateLabel.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     
@@ -84,16 +83,9 @@ class UserInfoViewController: GFDataLoadingViewController {
     }
     
     private func configureUIElements(with user : User) {
-        
-        let repoItemVC          = GFRepoItemVC(user: user)
-        repoItemVC.delegate     = self
-        
-        let followerItemVC      = GFFollowerItemVC(user: user)
-        followerItemVC.delegate = self
-        
         self.add(childViewController: GFUserInfoHeaderVC(user: user), to: self.headerView)
-        self.add(childViewController: repoItemVC, to: self.itemViewOne)
-        self.add(childViewController: followerItemVC, to: self.itemViewTwo)
+        self.add(childViewController: GFRepoItemVC(user: user, delegate: self), to: self.itemViewOne)
+        self.add(childViewController: GFFollowerItemVC(user: user, delegate: self), to: self.itemViewTwo)
         self.dateLabel.text = "Github since \(user.createdAt.convertToMonthYearFormat())"
     }
     
@@ -110,7 +102,8 @@ class UserInfoViewController: GFDataLoadingViewController {
 
 }
 
-extension UserInfoViewController : UserInfoViewControllerDelegate {
+extension UserInfoViewController : GFRepoItemVCDelegate {
+    
     func didTapGithubProfile(for user : User) {
         guard let url = URL(string: user.htmlUrl) else {
             presentGFAlertOnMainThread(title: "Invalid URL", message: "The url attached to this user is invalid.", buttonTitle: "Ok")
@@ -119,6 +112,9 @@ extension UserInfoViewController : UserInfoViewControllerDelegate {
         
         presentSafariVC(with: url)
     }
+}
+
+extension UserInfoViewController : GFFollowerItemVCDelegate {
     
     func didTapGetFollowers(for user : User) {
         guard user.followers != 0 else {
