@@ -13,7 +13,7 @@ class FollowerListViewController: GFDataLoadingViewController {
     
     var username : String!
     var followers : [Follower] = []
-    var filterdFollowers : [Follower] = []
+    var filteredFollowers : [Follower] = []
     var page = 1
     var hasMoreFollowers = true
     var isSearching = false
@@ -55,7 +55,7 @@ class FollowerListViewController: GFDataLoadingViewController {
         navigationItem.rightBarButtonItem = addButton
     }
     
-    private func configureCollectionView(){
+    private func configureCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeColumnFlowLayout(in: view))
         view.addSubview(collectionView)
         collectionView.delegate = self
@@ -64,9 +64,8 @@ class FollowerListViewController: GFDataLoadingViewController {
     }
     
     private func configureSearchController(){
-        let searchController    = UISearchController()
+        let searchController                    = UISearchController()
         searchController.searchResultsUpdater   = self
-        searchController.searchBar.delegate     = self
         searchController.searchBar.placeholder  = "Search for a username"
         searchController.obscuresBackgroundDuringPresentation = false
         navigationItem.searchController         = searchController
@@ -82,9 +81,8 @@ class FollowerListViewController: GFDataLoadingViewController {
             
             switch result {
                 case .success(let followers):
-                    
                 
-                    if followers.count < 100 {  hasMoreFollowers = false }
+                if followers.count < 100 { self.hasMoreFollowers = false }
                     self.followers.append(contentsOf: followers)
                 
                     if self.followers.isEmpty {
@@ -94,8 +92,8 @@ class FollowerListViewController: GFDataLoadingViewController {
                         }
                         return
                     }
-                
                     self.updateData(on: followers)
+                
                 case .failure(let error):
                     self.presentGFAlertOnMainThread(title: "Bad Stuff Happend", message: error.rawValue, buttonTitle: "Ok")
             }
@@ -163,7 +161,7 @@ extension FollowerListViewController : UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let activeArray         = isSearching ? filterdFollowers : followers
+        let activeArray         = isSearching ? filteredFollowers : followers
         let follower            = activeArray[indexPath.item]
         
         let destination         = UserInfoViewController()
@@ -175,17 +173,19 @@ extension FollowerListViewController : UICollectionViewDelegate {
     
 }
 
-extension FollowerListViewController : UISearchResultsUpdating, UISearchBarDelegate {
-    func updateSearchResults(for searchController: UISearchController) {
-        guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
-        isSearching = true
-        filterdFollowers = followers.filter { $0.login.lowercased().contains(filter.lowercased())}
-        updateData(on: filterdFollowers)
-    }
+extension FollowerListViewController: UISearchResultsUpdating {
     
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        isSearching = false
-        updateData(on: followers)
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let filter = searchController.searchBar.text, !filter.isEmpty else {
+            filteredFollowers.removeAll()
+            updateData(on: followers)
+            isSearching = false
+            return
+        }
+        
+        isSearching = true
+        filteredFollowers = followers.filter { $0.login.lowercased().contains(filter.lowercased()) }
+        updateData(on: filteredFollowers)
     }
 }
 
@@ -196,7 +196,7 @@ extension FollowerListViewController : UserInfoViewControllerDelegate {
         title           = username
         page            = 1
         followers.removeAll()
-        filterdFollowers.removeAll()
+        filteredFollowers.removeAll()
         collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: true)
         getFollowers(username: username, page: page)
     }

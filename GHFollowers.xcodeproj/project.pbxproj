@@ -44,6 +44,7 @@
 		B08053322BD8268D0019DE38 /* GFAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053312BD8268D0019DE38 /* GFAlertContainerView.swift */; };
 		B08053342BD833350019DE38 /* GFDataLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053332BD833350019DE38 /* GFDataLoadingViewController.swift */; };
 		B08053362BD8539C0019DE38 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053352BD8539C0019DE38 /* UIView+Ext.swift */; };
+		B080533A2BD958EF0019DE38 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053392BD958EF0019DE38 /* UITableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		B08053312BD8268D0019DE38 /* GFAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertContainerView.swift; sourceTree = "<group>"; };
 		B08053332BD833350019DE38 /* GFDataLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFDataLoadingViewController.swift; sourceTree = "<group>"; };
 		B08053352BD8539C0019DE38 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		B08053392BD958EF0019DE38 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				B08053262BD596BF0019DE38 /* Date+Ext.swift */,
 				B08053282BD596F70019DE38 /* String+Ext.swift */,
 				B08053352BD8539C0019DE38 /* UIView+Ext.swift */,
+				B08053392BD958EF0019DE38 /* UITableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				B08052E82BCED2720019DE38 /* GFTextField.swift in Sources */,
 				B08053292BD596F70019DE38 /* String+Ext.swift in Sources */,
 				B08053082BD194290019DE38 /* UIHelper.swift in Sources */,
+				B080533A2BD958EF0019DE38 /* UITableView.swift in Sources */,
 				B08052E22BCDCAFA0019DE38 /* SearchViewController.swift in Sources */,
 				B08052F22BD01D1F0019DE38 /* UIViewController+Ext.swift in Sources */,
 				B080531C2BD30AE70019DE38 /* Constants.swift in Sources */,
