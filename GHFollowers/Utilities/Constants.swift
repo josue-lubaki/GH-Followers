@@ -12,7 +12,10 @@ enum SFSymbols {
     static let folder       = "folder"
     static let gists        = "text.alignleft"
     static let followers    = "heart"
+    static let person       = "person"
     static let following    = "person.2"
+    static let person3      = "person.3"
+    static let checkmark    = "checkmark.circle"
 }
 
 
