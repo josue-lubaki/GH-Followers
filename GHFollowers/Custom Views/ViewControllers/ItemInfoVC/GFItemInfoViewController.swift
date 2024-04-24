@@ -42,7 +42,6 @@ class GFItemInfoViewController: UIViewController {
     private func configureStackView() {
         stackView.axis          = .horizontal
         stackView.distribution  = .equalSpacing
-        
         stackView.addArrangedSubview(itemInfoViewOne)
         stackView.addArrangedSubview(itemInfoViewTwo)
     }
@@ -51,9 +50,7 @@ class GFItemInfoViewController: UIViewController {
         actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
     }
     
-    @objc func actionButtonTapped(){
-        
-    }
+    @objc func actionButtonTapped(){ }
     
     private func layoutUI() {
         view.addSubViews(stackView, actionButton)

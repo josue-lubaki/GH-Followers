@@ -20,6 +20,7 @@ class GFAlertViewController: UIViewController {
     
     let padding : CGFloat = 20
     
+    
     init(alertTitle: String, message: String, buttonTitle: String) {
         super.init(nibName: nil, bundle: nil)
         
@@ -28,19 +29,23 @@ class GFAlertViewController: UIViewController {
         self.buttonTitle    = buttonTitle
     }
     
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.black.withAlphaComponent(0.75)
         view.addSubViews(containerView, titleLabel, actionButton, messageLabel)
+        
         configureContainerView()
         configureTitleLabel()
         configureActionButton()
         configureMessageLabel()
     }
+    
     
     private func configureContainerView() {
         NSLayoutConstraint.activate([
@@ -50,6 +55,7 @@ class GFAlertViewController: UIViewController {
             containerView.heightAnchor.constraint(equalToConstant: 220)
         ])
     }
+    
     
     private func configureTitleLabel() {
         titleLabel.text = alertTitle ?? "Something went wrong"
@@ -61,6 +67,7 @@ class GFAlertViewController: UIViewController {
             titleLabel.heightAnchor.constraint(equalToConstant: 28)
         ])
     }
+    
     
     private func configureActionButton() {
         actionButton.setTitle(buttonTitle ?? "Ok", for: .normal)
@@ -74,6 +81,7 @@ class GFAlertViewController: UIViewController {
         ])
     }
     
+    
     private func configureMessageLabel() {
         messageLabel.text           = message ?? "Unable to complete request"
         messageLabel.numberOfLines  = 4
@@ -86,8 +94,8 @@ class GFAlertViewController: UIViewController {
         ])
     }
     
-    @objc private func dismissViewController() {
+    
+    @objc private func dismissViewController() { 
         dismiss(animated: true)
     }
-    
 }

@@ -17,20 +17,24 @@ class GFEmptyStateView: UIView {
         configure()
     }
     
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
     convenience init(message : String) {
         self.init(frame: .zero)
         messageLabel.text = message
     }
     
+    
     private func configure() {
         addSubViews(messageLabel, logoImageView)
         configureMessageLabel()
         configureLogoImageView()
     }
+    
     
     private func configureMessageLabel() {
         messageLabel.numberOfLines  = 3
@@ -44,6 +48,7 @@ class GFEmptyStateView: UIView {
         ])
     }
     
+    
     private func configureLogoImageView() {
         logoImageView.image = UIImage(resource: .emptyStateLogo)
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -55,5 +60,4 @@ class GFEmptyStateView: UIView {
             logoImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 140)
         ])
     }
-    
 }
