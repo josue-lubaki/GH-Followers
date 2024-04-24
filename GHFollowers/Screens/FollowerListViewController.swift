@@ -7,11 +7,7 @@
 
 import UIKit
 
-protocol FollowerListViewControllerDelegate : AnyObject {
-    func didRequestFollowers(for username : String)
-}
-
-class FollowerListViewController: UIViewController {
+class FollowerListViewController: GFDataLoadingViewController {
     
     enum Section { case main }
     
@@ -21,6 +17,7 @@ class FollowerListViewController: UIViewController {
     var page = 1
     var hasMoreFollowers = true
     var isSearching = false
+    var isLoadingMoreFollowers = false
     
     
     var collectionView : UICollectionView!
@@ -77,6 +74,8 @@ class FollowerListViewController: UIViewController {
     
     private func getFollowers(username : String, page : Int) {
         showLoadingView()
+        isLoadingMoreFollowers = true
+        
         NetworkManager.shared.getFollowers(for: username, page: page) {[weak self] result in
             guard let self = self else { return }
             self.dismissLoadingView()
@@ -100,6 +99,8 @@ class FollowerListViewController: UIViewController {
                 case .failure(let error):
                     self.presentGFAlertOnMainThread(title: "Bad Stuff Happend", message: error.rawValue, buttonTitle: "Ok")
             }
+            
+            self.isLoadingMoreFollowers = false
         }
     }
     
@@ -155,7 +156,7 @@ extension FollowerListViewController : UICollectionViewDelegate {
         let height          = scrollView.frame.size.height
         
         if offsetY > contentHeight - height {
-            guard hasMoreFollowers else { return }
+            guard hasMoreFollowers, !isLoadingMoreFollowers else { return }
             page += 1
             getFollowers(username: username, page: page)
         }
@@ -186,10 +187,9 @@ extension FollowerListViewController : UISearchResultsUpdating, UISearchBarDeleg
         isSearching = false
         updateData(on: followers)
     }
-    
 }
 
-extension FollowerListViewController : FollowerListViewControllerDelegate {
+extension FollowerListViewController : UserInfoViewControllerDelegate {
     func didRequestFollowers(for username: String) {
         // Reset All and get followers for that user
         self.username   = username
@@ -197,7 +197,7 @@ extension FollowerListViewController : FollowerListViewControllerDelegate {
         page            = 1
         followers.removeAll()
         filterdFollowers.removeAll()
-        collectionView.setContentOffset(.zero, animated: true)
+        collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: true)
         getFollowers(username: username, page: page)
     }
 }
